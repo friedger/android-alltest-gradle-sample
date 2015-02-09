@@ -15,7 +15,7 @@ public class MyActivityTest {
     }
 
     @Test
-    public void testClickingClickMeButtonChangesHelloWorldText() {
+    public void testClearState() {
         mActivity.clearState();
         assertEquals(null, mActivity.getState());
     }
