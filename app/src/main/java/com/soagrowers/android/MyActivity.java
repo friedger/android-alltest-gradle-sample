@@ -13,8 +13,9 @@ public class MyActivity extends ActionBarActivity {
 
   TextView my_hello_text_view;
   Button mClickMeBtn;
+  private Object state = new Object();
 
-  @Override
+    @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_my);
@@ -26,8 +27,15 @@ public class MyActivity extends ActionBarActivity {
     my_hello_text_view.setText(getString(R.string.ok_thanks));
   }
 
+  public void clearState(){
+      state = null;
+  }
 
-  @Override
+  public Object getState() {
+      return state;
+  }
+
+    @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.my, menu);
